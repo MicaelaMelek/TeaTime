@@ -36,4 +36,10 @@ class Tea extends Model
 
         return $query->where('flavors', 'LIKE', "%$flavors%");
     }
+
+    public function base_types()
+    {
+        return $this->belongsToMany('App\BaseType', 'base_type_tea', 'tea_id', 'base_type_id');
+    }
+
 }

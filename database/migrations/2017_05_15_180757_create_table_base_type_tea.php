@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateBasetypesTable extends Migration
+class CreateTableBaseTypeTea extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,10 @@ class CreateBasetypesTable extends Migration
      */
     public function up()
     {
-        Schema::create('base_types', function (Blueprint $table) {
+        Schema::create('base_type_tea', function (Blueprint $table){
             $table->increments('id');
-            $table->string('code');
-            $table->timestamps();
+            $table->integer('base_type_id')->unsigned();
+            $table->integer('tea_id')->unsigned();
         });
     }
 
@@ -27,6 +27,6 @@ class CreateBasetypesTable extends Migration
      */
     public function down()
     {
-        Schema::drop('base_types');
+        Schema::drop('base_type_tea');
     }
 }
