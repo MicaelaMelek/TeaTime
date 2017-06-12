@@ -35,4 +35,10 @@ return [
         'secret' => env('STRIPE_SECRET'),
     ],
 
+    'facebook' => [
+        'client_id' => '206611579689700',
+        'client_secret' => '12ea892ac85af339329005a046fda64d',
+        'redirect' => 'http://teatime.dev/login/facebook/callback',
+    ],
+
 ];
